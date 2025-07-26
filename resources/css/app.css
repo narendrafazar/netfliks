@@ -1,3 +1,18 @@
+@import "./button.css";
+@import "./sidebar.css";
+@import "./input.css";
+
+/* @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
+
+/* defaultnya yang dibawah ini */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.flex::before,
+.flex::after {
+    display: none !important;
+}
+
