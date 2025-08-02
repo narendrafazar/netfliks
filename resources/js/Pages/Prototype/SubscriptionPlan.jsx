@@ -27,7 +27,7 @@ export default function SubscriptionPlan() {
                     <SubscriptionCard
                         name="Premium"
                         price={899000}
-                        durationInMonth={12}
+                        durationInMonth={6}
                         features={["Feature 1", "Feature 2", "Feature 3"]}
                     />
                 </div>
