@@ -23,6 +23,8 @@
         "vite": "^6.2.4"
     },
     "dependencies": {
+        "flickity": "^3.0.0",
+        "react-flickity-component": "^5.0.0",
         "react-player": "^3.3.1"
     }
 }

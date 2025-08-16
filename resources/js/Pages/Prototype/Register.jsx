@@ -50,7 +50,7 @@ export default function Register() {
                                         type="email"
                                         name="email"
                                         placeholder="Your Email Address"
-                                        value="anggaforreact@fb.com"
+                                        defaultValue="anggaforreact@fb.com"
                                     />
                                 </div>
                                 <div>
@@ -62,7 +62,6 @@ export default function Register() {
                                         type="password"
                                         name="password"
                                         placeholder="Your Password"
-                                        value="eeeeeeeeeeeeeee"
                                     />
                                 </div>
                             </div>

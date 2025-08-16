@@ -31,7 +31,7 @@ export default function Login() {
                             <div className="flex flex-col gap-6">
                                 <div>
                                     <InputLabel
-                                        forInput="email"
+                                        forinput="email"
                                         value="Email Address"
                                     />
                                     <TextInput
@@ -43,7 +43,7 @@ export default function Login() {
                                 </div>
                                 <div>
                                     <InputLabel
-                                        forInput="password"
+                                        forinput="password"
                                         value="Password"
                                     />
                                     <TextInput

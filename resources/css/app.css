@@ -1,6 +1,6 @@
-@import "./button.css";
 @import "./sidebar.css";
 @import "./input.css";
+@import "./button.css";
 
 /* @import "tailwindcss/base";
 @import "tailwindcss/components";
@@ -10,6 +10,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 .flex::before,
 .flex::after {

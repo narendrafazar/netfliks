@@ -3,13 +3,17 @@ import Flickity from "react-flickity-component";
 import { Head } from "@inertiajs/react";
 import FeaturedMovie from "@/Components/FeaturedMovie";
 import MovieCard from "@/Components/MovieCard";
+import 'flickity/css/flickity.css';
 
 export default function Dashboard() {
+
     const flickityOptions = {
+        initialIndex: 1,
         cellAlign: "left",
         contain: true,
         groupCells: 1,
-        wrapAround: false,
+        wrapAround: true,
+        // wrapAround: false,
         pageDots: false,
         prevNextButtons: false,
         draggable: ">1",

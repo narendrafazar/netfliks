@@ -1,3 +1,5 @@
+/* postcss */
+
 .btn-primary {
     @apply bg-alerange text-white border-alerange;
 }
@@ -17,3 +19,4 @@
 .btn-white-outline {
     @apply text-black border border-[#f1f1f1];
 }
+

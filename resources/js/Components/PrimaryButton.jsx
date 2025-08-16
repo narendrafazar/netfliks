@@ -25,7 +25,7 @@ import React from "react";
 import propTypes from "prop-types";
 import { Button } from "@headlessui/react";
 
-PrimaryButton.propTypes = {
+Button.propTypes = {
     type: propTypes.oneOf(["button", "submit", "reset"]),
     // type: propTypes.string, // bisa juga pake string untuk tipe button
     className: propTypes.string,
@@ -39,7 +39,6 @@ PrimaryButton.propTypes = {
         "light-outline",
         "white-outline",
     ]),
-    processing: propTypes.bool,
 };
 
 export default function PrimaryButton({

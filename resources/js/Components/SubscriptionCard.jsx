@@ -48,7 +48,7 @@ export default function SubscriptionCard({
                     </div>
 
                     {/* Bottom: CTA Button  */}
-                    <div onClick={onSelectSubscription(id)}>
+                    <div onClick={() => onSelectSubscription(id)}>
                         <PrimaryButton type="button" variant="white-outline">
                             <span className="text-base">Start {name}</span>
                         </PrimaryButton>
@@ -108,7 +108,7 @@ export default function SubscriptionCard({
                     </div>
 
                     {/* Bottom: CTA Button */}
-                    <div onClick={onSelectSubscription(id)}>
+                    <div onClick={() => onSelectSubscription(id)}>
                         <PrimaryButton
                             type="button"
                             variant="primary">
