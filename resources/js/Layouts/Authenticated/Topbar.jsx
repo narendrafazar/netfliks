@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
+import { Link } from "@inertiajs/react";
 
-export default function Topbar() {
+export default function Topbar({name}) {
     const [dropdownOpen, setDropdownOpen] = useState(true);
     const dropdownTarget = useRef();
 
@@ -8,6 +9,7 @@ export default function Topbar() {
         if (dropdownOpen) {
             dropdownTarget.current.classList.remove("hidden");
             dropdownTarget.current.classList.add("block");
+            dropdownTarget.current.classList.add("flex");
         } else {
             dropdownTarget.current.classList.add("hidden");
             dropdownTarget.current.classList.remove("block");
@@ -32,7 +34,7 @@ export default function Topbar() {
             />
             <div className="flex items-center gap-4">
                 <span className="text-black text-sm font-medium">
-                    Welcome, Granola Sky
+                Welcome, {name}
                 </span>
 
                 <div className="collapsible-dropdown flex flex-col gap-2 relative cursor-pointer">
@@ -47,27 +49,40 @@ export default function Topbar() {
                         />
                     </div>
                     <div
-                        className="bg-white rounded-2xl text-black font-medium flex flex-col gap-1 absolute z-[999] right-0 top-[80px] min-w-[180px] hidden overflow-hidden"
+                        // className="bg-white rounded-2xl text-black font-medium flex flex-col gap-1 absolute z-[999] right-0 top-[80px] min-w-[180px] hidden overflow-hidden"
+                        className="bg-white rounded-2xl text-black font-medium flex-col gap-1 absolute z-[999] right-0 top-[80px] min-w-[180px] hidden overflow-hidden"
                         ref={dropdownTarget} // ✅ corrected
                     >
                         <a
                             href="#!"
-                            className="transition-all hover:bg-sky-100 p-4"
+                            className="transition-all hover:bg-sky-100 p-4 flex"
                         >
                             Dashboard
                         </a>
                         <a
                             href="#!"
-                            className="transition-all hover:bg-sky-100 p-4"
+                            className="transition-all hover:bg-sky-100 p-4 flex"
+                            // ✅ added `as="button"` to make it a button
+                            // ✅ added `method="post"` to ensure it submits as a POST request
+                            // ✅ added `onClick` to handle confirmation before logout
+                            // ✅ added `className` for styling 
                         >
                             Settings
                         </a>
-                        <a
-                            href="sign_in.html"
-                            className="transition-all hover:bg-sky-100 p-4"
-                        >
+                        <Link
+                            href={route("logout")}
+                            
+                            method="post"
+                            as="button"
+                            onClick={(e) => {
+                                if (!confirm("Are you sure you want to log out?")) {
+                                    e.preventDefault();
+                                }
+                            }}
+                            className="transition-all hover:bg-sky-100 p-4 flex"
+                        >   
                             Sign Out
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -30,7 +30,7 @@ class MovieTableSeeder extends Seeder
             'video_url' => 'https://example.com/the-dark-knight.mp4',
             'thumbnail' => 'https://example.com/thumbnails/the-dark-knight.jpg',
             'rating' => 9.0,
-            'is_featured' => true,
+            'is_featured' => false,
             ],
             [
             'name' => 'Interstellar',
