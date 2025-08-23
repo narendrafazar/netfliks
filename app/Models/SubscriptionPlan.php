@@ -12,7 +12,7 @@ class SubscriptionPlan extends Model
     protected $fillable = [
         'name',
         'price',
-        'active_period_in_monmths',
+        'active_period_in_months',
         'features',
     ];
 }
