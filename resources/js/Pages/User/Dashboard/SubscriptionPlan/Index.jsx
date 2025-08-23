@@ -1,8 +1,28 @@
 import Authenticated from "@/Layouts/Authenticated/Index.jsx";
 import SubscriptionCard from "@/Components/SubscriptionCard.jsx";
 import { Head } from "@inertiajs/react";
+import { Inertia } from '@inertiajs/inertia';
 
 export default function SubscriptionPlan({ auth, subscriptionPlans }) {
+    const selectSubscription = id => {
+        // console.log(`Selected subscription plan with ID: ${id}`);
+        // alert(`Selected subscription plan with ID: ${id}`);
+        // You can redirect to a payment page or perform any other action
+        // For example, you might want to redirect to a payment processing page
+        // window.location.href = `/subscribe/${id}`;
+        // Or use Inertia to navigate
+        // Inertia.visit(`/subscribe/${id}`);
+
+        // Inertia.post(route('subscriptionPlan.userSubscribe', { subscriptionPlan: id }), {
+        //     _method: 'POST',   
+        //     // This will send a POST request to the specified route with the subscription plan ID 
+        // });
+
+        Inertia.post(
+            route('subscriptionPlan.userSubscribe', { subscriptionPlan: id }), {
+        });
+    }
+    
     return (
         <>
             <Head title="Subscription Plans" />
@@ -27,6 +47,7 @@ export default function SubscriptionPlan({ auth, subscriptionPlans }) {
                                 features={JSON.parse(subscriptionPlan.features)}
                                 isPremium={subscriptionPlan.name === 'Premium'}
                                 key={subscriptionPlan.id}
+                                onSelectSubscription={() => selectSubscription(subscriptionPlan.id)}
                             />
                         ))}
 
