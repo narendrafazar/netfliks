@@ -1,5 +1,5 @@
 import MenuItem from "./MenuItem";
-import { UserMenu, UserOthers } from "./MenuList";
+import { UserMenu, UserOthers } from "@/Layouts/Authenticated/MenuList";
 import SubscriptionDetail from "./SubscriptionDetail";
 
 export default function Sidebar({ auth }) {

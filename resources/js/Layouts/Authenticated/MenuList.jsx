@@ -82,7 +82,7 @@ const UserMenu = [
 
 const UserOthers = [
     {
-        link: "subscription.index",
+        link: "subscriptionPlan.index",
         icon: (
             <svg
                 width="24"
